@@ -1,5 +1,5 @@
-# electron-react-typescript
-
+# electron-react-typescript-obfuscation
+##### [updated, obfusacted in prod version of this](https://github.com/Robinfr/electron-react-typescript)
 ### A Boilerplate for an Easy Start with TypeScript, React, and Electron.
 
 [![React](docs/img/react.png)](https://reactjs.org/)
@@ -15,7 +15,7 @@
 Clone the repository with Git:
 
 ```bash
-git clone --depth=1 git@github.com:Robinfr/electron-react-typescript.git <your-project-name>
+git clone --depth=1 git@github.com:aabbccsmith/electron-react-typescript-obfuscation.git <your-project-name>
 ```
 
 And then install the dependencies:
@@ -73,4 +73,4 @@ Also remove `tslint-config-prettier` from the `extends` section in `tslint.json`
 This project was set up from scratch but is heavily influenced by the [Electron React Boilerplate project](https://github.com/chentsulin/electron-react-boilerplate) and [React Redux TypeScript guide](https://github.com/piotrwitek/react-redux-typescript-guide).
 
 ## License
-MIT © [R. Franken](https://github.com/Robinfr)
+MIT © [Alistair Smith](https://github.com/aabbccsmith)
