@@ -15,5 +15,6 @@ baseConfig.plugins.push(
 );
 
 module.exports = merge.smart(baseConfig, {
+  devtool: 'hidden-source-map',
   mode: 'production',
 });

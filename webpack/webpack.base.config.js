@@ -15,6 +15,6 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json'],
   },
-  devtool: 'none',
+  devtool: 'hidden-source-map',
   plugins: [],
 };

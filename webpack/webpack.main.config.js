@@ -8,6 +8,7 @@ module.exports = merge.smart(baseConfig, {
   entry: {
     main: './src/main/main.js',
   },
+  devtool: 'hidden-source-map',
   module: {
     rules: [
       {

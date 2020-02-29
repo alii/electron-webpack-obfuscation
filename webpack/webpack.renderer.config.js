@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const baseConfig = require('./webpack.base.config');
 
 module.exports = merge.smart(baseConfig, {
+  devtool: 'hidden-source-map',
   target: 'electron-renderer',
   entry: {
     app: ['@babel/polyfill', './src/renderer/app.js'],
