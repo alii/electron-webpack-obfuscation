@@ -26,6 +26,11 @@ After running these, configure your `package.json` and add deps where appropriat
 
 To start the app in development, run `yarn start-dev`. For compiling, run `yarn dist`.
 
+## Building
+
+To compile the app, we use `electron-builder`. It's very versatile and supports many operating systems. Additionally, it supports the publishing of apps to GitHub, Amazon AWS S3 or even custom servers.
+Building is simple, simply run `yarn dist` and wait for the magic to happen. You will see a folder called `dist` is created. You may delete this after the build process has completed. Your releases (installers, zips, dmgs, etc...) can be found under `release/`
+
 ### FAQ
 
 What's the best way to get this boilerplate in to my own repo?
