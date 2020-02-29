@@ -5,51 +5,51 @@ import * as path from 'path';
 jest.setTimeout(10000);
 
 describe('Main window', () => {
-    let app: Application;
+  let app: Application;
 
-    beforeEach(() => {
-        app = new Application({
-            path: electronPath.toString(),
-            args: [path.join(__dirname, '..', '..')]
-        });
-
-        return app.start();
+  beforeEach(() => {
+    app = new Application({
+      path: electronPath.toString(),
+      args: [path.join(__dirname, '..', '..')],
     });
 
-    afterEach(() => {
-        if (app.isRunning()) {
-            return app.stop();
-        }
-    });
+    return app.start();
+  });
 
-    it('opens the window', async () => {
-        const { client, browserWindow } = app;
+  afterEach(() => {
+    if (app.isRunning()) {
+      return app.stop();
+    }
+  });
 
-        await client.waitUntilWindowLoaded();
-        const title = await browserWindow.getTitle();
+  it('opens the window', async () => {
+    const { client, browserWindow } = app;
 
-        expect(title).toBe('Webpack App');
-    });
+    await client.waitUntilWindowLoaded();
+    const title = await browserWindow.getTitle();
 
-    it('increments the counter', async () => {
-        const { client } = app;
+    expect(title).toBe('Webpack App');
+  });
 
-        await client.waitUntilWindowLoaded();
-        await client.click('#increment');
+  it('increments the counter', async () => {
+    const { client } = app;
 
-        const counterText = await client.getText('#counter-value');
+    await client.waitUntilWindowLoaded();
+    await client.click('#increment');
 
-        expect(counterText).toBe('Current value: 1');
-    });
+    const counterText = await client.getText('#counter-value');
 
-    it('decrements the counter', async () => {
-        const { client } = app;
+    expect(counterText).toBe('Current value: 1');
+  });
 
-        await client.waitUntilWindowLoaded();
-        await client.click('#decrement');
+  it('decrements the counter', async () => {
+    const { client } = app;
 
-        const counterText = await client.getText('#counter-value');
+    await client.waitUntilWindowLoaded();
+    await client.click('#decrement');
 
-        expect(counterText).toBe('Current value: -1');
-    });
+    const counterText = await client.getText('#counter-value');
+
+    expect(counterText).toBe('Current value: -1');
+  });
 });
