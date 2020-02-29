@@ -15,6 +15,6 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json'],
   },
-  devtool: 'source-map',
+  devtool: 'none',
   plugins: [],
 };
