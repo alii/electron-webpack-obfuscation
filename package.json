@@ -15,7 +15,7 @@
     "lint": "eslint ./**/*.js",
     "lint-fix": "eslint ./**/*.js --fix",
     "pack": "npm run build && electron-builder --dir",
-    "dist": "npm run build && electron-builder",
+    "dist": "npm run build && rimraf ./dist/*.map && electron-builder",
     "postinstall": "electron-builder install-app-deps"
   },
   "husky": {
@@ -93,5 +93,7 @@
     "webpack-merge": "^4.2.2",
     "webpack-obfuscator": "0.20.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "rimraf": "^3.0.2"
+  }
 }
