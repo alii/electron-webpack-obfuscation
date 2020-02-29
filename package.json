@@ -6,16 +6,15 @@
   "scripts": {
     "build-main": "cross-env NODE_ENV=production GENERATE_SOURCEMAP=false webpack --config ./webpack/webpack.main.prod.config.js",
     "build-renderer": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.renderer.prod.config.js",
-    "build": "npm run build-main && npm run build-renderer",
+    "build": "yarn build-main && yarn build-renderer",
     "start-renderer-dev": "webpack-dev-server --config ./webpack/webpack.renderer.dev.config.js",
     "start-main-dev": "webpack --config ./webpack/webpack.main.config.js && electron ./dist/main.js",
-    "start-dev": "cross-env START_HOT=1 npm run start-renderer-dev",
-    "prestart": "npm run build",
+    "start-dev": "cross-env START_HOT=1 yarn start-renderer-dev",
+    "prestart": "yarn build",
     "start": "electron .",
     "lint": "eslint ./**/*.js",
     "lint-fix": "eslint ./**/*.js --fix",
-    "pack": "npm run build && electron-builder --dir",
-    "dist": "npm run build && rimraf ./dist/*.map && electron-builder",
+    "dist": "yarn build && rimraf ./dist/*.map && electron-builder",
     "postinstall": "electron-builder install-app-deps"
   },
   "husky": {
