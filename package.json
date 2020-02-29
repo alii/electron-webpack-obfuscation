@@ -1,6 +1,6 @@
 {
   "name": "electron-webpack-obfuscation",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A barebones boilerplate to get electron working with advanced webpack configuration.",
   "main": "./dist/main.js",
   "scripts": {
@@ -12,8 +12,8 @@
     "start-dev": "cross-env START_HOT=1 npm run start-renderer-dev",
     "prestart": "npm run build",
     "start": "electron .",
-    "lint": "eslint 'src/**/*'",
-    "lint-fix": "eslint 'src/**/*' --fix",
+    "lint": "eslint ./**/*.js",
+    "lint-fix": "eslint ./**/*.js --fix",
     "pack": "npm run build && electron-builder --dir",
     "dist": "npm run build && electron-builder",
     "postinstall": "electron-builder install-app-deps"
@@ -93,9 +93,8 @@
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "webpack-obfuscator": "0.20.2"
   },
-  "dependencies": {
-    "webpack-obfuscator": "^0.20.2"
-  }
+  "dependencies": {}
 }

@@ -1,4 +1,3 @@
-const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 
@@ -18,7 +17,7 @@ module.exports = merge.smart(baseConfig, {
         options: {
           cacheDirectory: true,
           babelrc: false,
-          presets: [['@babel/preset-env', { targets: 'maintained node versions' }], '@babel/preset-typescript'],
+          presets: [['@babel/preset-env', { targets: 'maintained node versions' }]],
           plugins: [['@babel/plugin-proposal-class-properties', { loose: true }]],
         },
       },

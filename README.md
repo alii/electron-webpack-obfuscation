@@ -29,10 +29,11 @@ To start the app in development, run `yarn start-dev`. For compiling, run `yarn 
 ### FAQ
 
 What's the best way to get this boilerplate in to my own repo?
+
 - If you don't want to have this as your origin, or you are looking to get this boilerplate into your own (maybe even private) repo, then go ahead and fork this. Afterwards, you can run the **Installation** instructions again, but replacing the clone URL to your repo.
 
 How can I add React!?
-- Wait patiently, is my only answer. I will eventually have enough time to post an announcement as an issue documenting the installation guide for React. This is the perfect, no clutter boilerplate for React, too. 
 
+- Wait patiently, is my only answer. I will eventually have enough time to post an announcement as an issue documenting the installation guide for React. This is the perfect, no clutter boilerplate for React, too.
 
 You are passively sponsoring OSS (Open Source Software) by using this boilerplate. Thank you! If you liked it, please give this repo a star :)
