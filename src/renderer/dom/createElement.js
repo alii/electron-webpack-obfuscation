@@ -7,6 +7,7 @@
  * @param {string} tag The tag of the element
  * @param {object} props The attributes of the element
  * @param  {...WbpckDomChild} children Children HTMLElement[] or strings
+ * @returns {HTMLElement} The created element
  */
 const createElement = (tag = 'div', props = { className: 'default element' }, ...children) => {
   /**
