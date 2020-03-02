@@ -1,5 +1,7 @@
 # electron-webpack-obfuscation
 
+![Dependencies](https://david-dm.org/aabbccsmith/electron-webpack-obfuscation.svg)
+
 A barebones boilerplate to get webpack & babel working with electron.
 
 ### Prerequisites
