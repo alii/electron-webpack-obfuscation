@@ -1,0 +1,43 @@
+{
+  "name": "electron-webpack-obfuscation",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "source-map-support": "^0.5.16"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.9.4",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^2.32.0",
+    "@typescript-eslint/parser": "^2.32.0",
+    "electron": "8.2.0",
+    "electron-builder": "^22.4.1",
+    "electron-webpack": "^2.8.2",
+    "electron-webpack-ts": "^4.0.1",
+    "eslint": "^7.0.0",
+    "eslint-plugin-react": "^7.19.0",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
+    "sass-loader": "^8.0.2",
+    "typescript": "^3.8.3",
+    "webpack": "~4.42.1",
+    "webpack-obfuscator": "^0.28.1"
+  },
+  "electronWebpack": {
+    "main": {
+      "webpackConfig": "webpack/webpack.main.additions.js"
+    },
+    "renderer": {
+      "webpackConfig": "webpack/webpack.renderer.additions.js"
+    }
+  }
+}
