@@ -1,6 +1,6 @@
 # electron-webpack-obfuscation
 
-![Dependencies](https://david-dm.org/aabbccsmith/electron-webpack-obfuscation.svg)
+[![Dependencies](https://david-dm.org/aabbccsmith/electron-webpack-obfuscation.svg)](https://david-dm.org/aabbccsmith/electron-webpack-obfuscation)
 
 A barebones boilerplate to get typescript, webpack, react, babel, obfuscation in prod AND hot reloading on the main and renderer working with electron. It's the real deal. :tada:
 
