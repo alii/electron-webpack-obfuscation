@@ -1,0 +1,42 @@
+{
+  "name": "electron-webpack-obfuscation",
+  "version": "0.0.0",
+  "license": "MIT",
+  "productName": "Demo App",
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "cross-env NODE_ENV=production && electron-webpack --mode=production",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "source-map-support": "^0.5.19"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.10.4",
+    "@types/react": "^16.9.50",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "cross-env": "^7.0.2",
+    "electron": "10.1.3",
+    "electron-builder": "^22.8.1",
+    "electron-webpack": "^2.8.2",
+    "electron-webpack-ts": "^4.0.1",
+    "eslint": "^7.10.0",
+    "eslint-plugin-react": "^7.21.3",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.1.2",
+    "sass-loader": "^10.0.2",
+    "typescript": "^4.0.3",
+    "webpack": "~4.44.2",
+    "webpack-obfuscator": "^2.4.3"
+  },
+  "electronWebpack": {
+    "main": {
+      "webpackConfig": "webpack.main.additions.js"
+    }
+  }
+}
